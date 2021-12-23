@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import Widget from './Widget';
 
 function NavBar() {
     return (
@@ -24,6 +25,7 @@ function NavBar() {
                             <Nav>
                             <Nav.Link href="#deets">Avatar</Nav.Link>
                         </Nav>
+                        <Widget />
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
