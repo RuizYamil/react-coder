@@ -6,11 +6,11 @@ function ItemCount({min, max}) {
     const [counter, setCounter] = useState(min)
 
     const handleIncrement = () => {
-        counter < max ? setCounter(prev => prev + 1) : console.log("Stock maximo del producto");
+        counter < max ? setCounter(prev => prev + 1) : alert("Stock maximo del producto");
     }
 
     const handleDecrement = () => {
-        counter > min ? setCounter(prev => prev - 1) : console.log('Minimo de compra');
+        counter > min ? setCounter(prev => prev - 1) : alert('Minimo de compra');
     }
 
     return (
