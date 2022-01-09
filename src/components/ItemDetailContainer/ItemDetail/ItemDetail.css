@@ -1,0 +1,9 @@
+.card-price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+    border-top: 1px solid rgba(0,0,0,.125);
+    font-weight: 600;
+    font-size: 24px;
+}

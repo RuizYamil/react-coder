@@ -1,7 +1,7 @@
 import React from 'react'
-import Item from './Item'
+import Item from '../Item/Item'
 import { useState, useEffect } from 'react'
-import { getFetch } from './mock'
+import { getFetch } from '../mock'
 
 function ItemList() {
     const [products, setproducts] = useState([])

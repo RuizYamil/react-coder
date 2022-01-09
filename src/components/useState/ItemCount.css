@@ -1,4 +1,18 @@
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1%;
+}
 .counter button {
-    margin: 1%;
-    padding: 1%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }

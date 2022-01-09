@@ -15,8 +15,8 @@ function ItemCount({min, max}) {
 
     return (
         <div className='counter'>
-            <h1>{counter}</h1>
             <button onClick={handleIncrement}>+</button>
+            <h1>{counter}</h1>
             <button onClick={handleDecrement}>-</button>     
         </div>
     )
