@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import '../useState/ItemCount.css'
+import React, {useState} from 'react';
+import './ItemCount.css';
 
 function ItemCount({min, max}) {
 

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Item({prod}) {
     return (
@@ -7,10 +8,12 @@ function Item({prod}) {
                 {`${prod.title} - ${prod.price}`}
             </div>
             <div className='card-body'>
-                <img src={prod.productImg} alt={prod.alt} className='w-50' />
+                <img src={prod.img} alt={prod.alt} className='w-50' />
             </div>
             <div className='card-footer'>
-                <button className='btn btn-outline-primary btn-block'>Agregar al carrito</button>
+                <Link to={`/detail/${prod.id}`}>
+                    <button className='btn btn-outline-primary btn-block'>Detalle del producto</button>
+                </Link>
             </div>
         </div>
     )

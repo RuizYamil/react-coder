@@ -2,30 +2,32 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Widget from './Widget';
+import { Link } from 'react-router-dom';
+import './NavBar.css'
 
 function NavBar() {
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"> 
+                <Link to={'/'}>Logo</Link>
                 <Container>
-                    <Navbar.Brand href="#home">Electronics</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#features">Inicio</Nav.Link>
-                            <Nav.Link href="#pricing">Nosotros</Nav.Link>
+                            <Link to={'/'}>Inicio</Link>
+                            <Link to={'_blank'}>Nosotros</Link>
                             <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Heladeras</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">TV</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Consolas</NavDropdown.Item>
+                                <Link to={"/category/component"}>Componentes</Link>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Herramientas</NavDropdown.Item>
+                                <Link to={"/category/other"}>Otros</Link>
                             </NavDropdown>
                             </Nav>
                             <Nav>
-                            <Nav.Link href="#deets">Avatar</Nav.Link>
+                            <Link to={'_blank'}>Avatar</Link>
                         </Nav>
-                        <Widget />
+                        <Link to={'/cart'}>
+                            <Widget />
+                        </Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

@@ -10,10 +10,11 @@ function ItemDetail({product}) {
                     {product.title}
                 </div>
                 <div className='card-body'>
-                    <img src={product.productImg} alt={product.alt} className='w-50' />
+                    <img src={product.img} alt={product.alt} className='w-50' />
                 </div>
                 <div className='card-price'>
-                    <ItemCount min={1} max={10}/> - {product.price}
+                    <ItemCount min={1} max={10}/>
+                    {product.price}
                 </div>
                 <div className='card-footer'>
                     {product.description}

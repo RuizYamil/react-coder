@@ -1,0 +1,17 @@
+a {
+    color: rgba(255,255,255,.55);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0 1%;
+}
+
+a:hover {
+    color: rgba(255,255,255,.75);
+}
+
+.dropdown-menu a {
+    color: black;
+}

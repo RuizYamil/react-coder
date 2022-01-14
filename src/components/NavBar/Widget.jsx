@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import cart from './cart.png';
+import './Widget.css';
 
 function Widget() {
     return (
