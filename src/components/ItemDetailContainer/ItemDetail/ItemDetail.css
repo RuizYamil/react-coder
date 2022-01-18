@@ -7,3 +7,10 @@
     font-weight: 600;
     font-size: 24px;
 }
+.buy-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+    width: 100%;
+}

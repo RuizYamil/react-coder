@@ -1,23 +1,26 @@
 import React, {useState} from 'react';
 import './ItemCount.css';
 
-function ItemCount({min, max}) {
+function ItemCount({stock, onAdd, price}) {
 
-    const [counter, setCounter] = useState(min)
+    const [counter, setCounter] = useState(1)
 
     const handleIncrement = () => {
-        counter < max ? setCounter(prev => prev + 1) : alert("Stock maximo del producto");
+        counter < stock ? setCounter(prev => prev + 1) : alert("Stock maximo del producto");
     }
 
     const handleDecrement = () => {
-        counter > min ? setCounter(prev => prev - 1) : alert('Minimo de compra');
+        counter > 1 && setCounter(prev => prev -1); 
+        alert('Minimo de compra');
     }
 
     return (
         <div className='counter'>
-            <button onClick={handleIncrement}>+</button>
+            <button className='btn btn-outline-primary btn-block' onClick={handleDecrement}>-</button>
             <h1>{counter}</h1>
-            <button onClick={handleDecrement}>-</button>     
+            <button className='btn btn-outline-primary btn-block' onClick={handleIncrement}>+</button>
+            {price}
+            <button className='btn btn-outline-primary btn-block' onClick={() => onAdd(counter)}>Agregar al carrito</button>     
         </div>
     )
 }
