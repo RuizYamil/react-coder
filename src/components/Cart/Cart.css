@@ -1,0 +1,21 @@
+.container-list-cart {
+    margin: 4% 0;
+}
+.container-list-cart button {
+    margin: 2%;
+}
+.list-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    border: 1px solid;
+    margin: auto;
+}
+.list-cart .module {
+    width: 33%;
+}
+.list-cart .module p {
+    margin: unset;
+    font-weight: bold;
+}
