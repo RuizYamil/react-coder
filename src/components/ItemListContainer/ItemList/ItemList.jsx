@@ -4,6 +4,13 @@ import { useState, useEffect } from 'react';
 import { getFetch } from '../mock';
 import { useParams } from 'react-router-dom';
 import './ItemList.css';
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/react";
+
+const override = css`
+  display: block;
+  margin: 200px auto;
+`;
 
 function ItemList() {
     const [products, setproducts] = useState([])
@@ -26,7 +33,7 @@ function ItemList() {
 
     return (
         <div className='center'>
-            { loading ? <h2> Cargando... </h2>
+            { loading ? <ClipLoader color='blue' loading={loading} css={override} size={70} />
                 :
                 products.map(prod => <div 
                     key={prod.id}

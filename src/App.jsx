@@ -13,8 +13,8 @@ function App() {
           <div className="App">
             <NavBar />
             <Routes>
-              <Route exact path='/' element={<ItemListContainer greeting='Hola Coder' />} />
-              <Route exact path='/category/:idCategory' element={<ItemListContainer greeting='Hola Coder' />} />
+              <Route exact path='/' element={<ItemListContainer greeting='Productos' />} />
+              <Route exact path='/category/:idCategory' element={<ItemListContainer greeting='Productos' />} />
               <Route exact path='/detail/:idDetail' element={<ItemDetailContainer />} />
               <Route exact path='/cart' element={<Cart />} />
             </Routes>
