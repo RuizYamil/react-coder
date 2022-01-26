@@ -35,10 +35,11 @@ export const CartContextProvider = ({children}) => {
         return cartList.reduce((acum, item) => acum = acum + item.quantity , 0)
     }
 
-    const deleteItem = (items) => {
-        const item = cartList.find( (prod) => prod.id === items.id )
-        const indice = cartList.indexOf(item)
-        return cartList.splice(indice, 1)
+    const deleteItem = (id) => {
+        const item = cartList.filter( (prod) => prod.id !== id )
+        setCartList(item)
+        // const indice = cartList.indexOf(item)
+        // return cartList.splice(indice, 1)
     }
 
     return(
