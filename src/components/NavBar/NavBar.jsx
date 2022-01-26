@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './NavBar.css'
 
 function NavBar() {
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"> 

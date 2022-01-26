@@ -28,7 +28,7 @@ function ItemDetail({product}) {
                 <div className='card-price'>
                     {show ? <ItemCount stock={product.stock} onAdd={onAdd} price={product.price}/> :
                         <div className='buy-buttons'>
-                            <Link to={'/cart'}><button className='btn btn-outline-primary btn-block'>Terminar la compra</button></Link>
+                            <Link to={'/cart'}><button className='btn btn-outline-primary btn-block'>Ir al carrito</button></Link>
                             <Link to={'/'}><button className='btn btn-outline-primary btn-block'>Seguir comprando</button></Link>
                         </div>
                     }

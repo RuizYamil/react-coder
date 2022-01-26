@@ -25,13 +25,30 @@ export const CartContextProvider = ({children}) => {
     
     function emptyCart(){
         setCartList([])
-    } 
+    }
+    
+    const totalPrice = () => {
+        return cartList.reduce((acum, value) => (acum + (value.quantity * value.price)), 0)
+    }
+
+    const totalQuantity = () => {
+        return cartList.reduce((acum, item) => acum = acum + item.quantity , 0)
+    }
+
+    const deleteItem = (items) => {
+        const item = cartList.find( (prod) => prod.id === items.id )
+        const indice = cartList.indexOf(item)
+        return cartList.splice(indice, 1)
+    }
 
     return(
         <CartContext.Provider value={{
             cartList,
             addCart,
-            emptyCart
+            emptyCart,
+            totalQuantity,
+            totalPrice,
+            deleteItem
         }}>
             {children}
         </CartContext.Provider>
