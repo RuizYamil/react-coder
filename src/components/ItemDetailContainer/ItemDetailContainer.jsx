@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { getFetch } from '../ItemListContainer/mock'
 import ItemDetail from './ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import ClipLoader from "react-spinners/ClipLoader";
 import { css } from "@emotion/react";
+import { doc, getDoc, getFirestore } from 'firebase/firestore';
 
 const override = css`
   display: block;
@@ -16,8 +16,10 @@ function ItemDetailContainer() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        getFetch
-        .then(resp => setproducts(resp.find(prod => prod.id === idDetail)))
+        const db = getFirestore()
+        const queryProd = doc(db, 'items', idDetail)
+        getDoc(queryProd)
+        .then((resp) => { setproducts({id: resp.id, ...resp.data() }) })
         .finally(()=> setLoading(false))
     }, [idDetail])
 

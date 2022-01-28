@@ -1,11 +1,11 @@
 import React from 'react';
 import Item from '../Item/Item';
 import { useState, useEffect } from 'react';
-import { getFetch } from '../mock';
 import { useParams } from 'react-router-dom';
 import './ItemList.css';
 import ClipLoader from "react-spinners/ClipLoader";
 import { css } from "@emotion/react";
+import {collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 const override = css`
   display: block;
@@ -19,13 +19,19 @@ function ItemList() {
 
     useEffect(() => {
         if(idCategory){
-            getFetch
-            .then(resp => setproducts(resp.filter(prod => prod.category === idCategory)))
+            const db = getFirestore()
+            const queryCollection = query(
+                collection(db, 'items'), 
+                where('category',  '==', idCategory))
+            getDocs(queryCollection)
+            .then(res => setproducts(res.docs.map( prod => ({id: prod.id, ...prod.data() }) ) ))
             .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         }else{
-            getFetch
-            .then(resp => setproducts(resp))
+            const db = getFirestore()
+            const queryCollection = query(collection(db, 'items'))
+            getDocs(queryCollection)
+            .then(res => setproducts(res.docs.map( prod => ({id: prod.id, ...prod.data() }) ) ))
             .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         }

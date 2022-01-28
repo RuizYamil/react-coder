@@ -20,10 +20,11 @@ function ItemDetail({product}) {
         <div className='col-md-4'>
             <div className='card w-100 mt-5'>
                 <div className='card-header'>
-                    {product.title}
+                    {product.name}
                 </div>
                 <div className='card-body'>
                     <img src={product.img} alt={product.alt} className='w-50' />
+                    {console.log(product.img)}
                 </div>
                 <div className='card-price'>
                     {show ? <ItemCount stock={product.stock} onAdd={onAdd} price={product.price}/> :

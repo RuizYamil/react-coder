@@ -21,7 +21,7 @@ function Cart() {
                     <div className='list-cart' key={prod.id}>
                         <div className='module'>
                             <p>Titulo</p>
-                            {prod.title}
+                            {prod.name}
                         </div>
                         <div className='module'>
                             <p>Precio</p>

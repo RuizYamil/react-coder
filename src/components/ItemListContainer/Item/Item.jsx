@@ -5,7 +5,7 @@ function Item({prod}) {
     return (
         <div className='card w-100 mt-5'>
             <div className='card-header'>
-                {`${prod.title} - ${prod.price}`}
+                {`${prod.name} - ${prod.price}`}
             </div>
             <div className='card-body'>
                 <img src={prod.img} alt={prod.alt} className='w-50' />
