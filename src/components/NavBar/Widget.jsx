@@ -9,7 +9,7 @@ function Widget() {
     return (
         <div>
             <img src={cart} className='cart' alt='cart'/>
-            <span class="position-absolute translate-middle badge rounded-circle bg-danger">
+            <span className='position-absolute translate-middle badge rounded-circle bg-danger'>
                 { totalQuantity() !== 0 && totalQuantity() }
             </span>
         </div>

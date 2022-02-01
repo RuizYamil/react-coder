@@ -24,7 +24,6 @@ function ItemDetail({product}) {
                 </div>
                 <div className='card-body'>
                     <img src={product.img} alt={product.alt} className='w-50' />
-                    {console.log(product.img)}
                 </div>
                 <div className='card-price'>
                     {show ? <ItemCount stock={product.stock} onAdd={onAdd} price={product.price}/> :

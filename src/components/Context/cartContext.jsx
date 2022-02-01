@@ -38,8 +38,6 @@ export const CartContextProvider = ({children}) => {
     const deleteItem = (id) => {
         const item = cartList.filter( (prod) => prod.id !== id )
         setCartList(item)
-        // const indice = cartList.indexOf(item)
-        // return cartList.splice(indice, 1)
     }
 
     return(
