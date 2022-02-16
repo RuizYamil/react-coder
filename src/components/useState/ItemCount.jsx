@@ -11,7 +11,6 @@ function ItemCount({stock, onAdd, price}) {
 
     const handleDecrement = () => {
         counter > 1 && setCounter(prev => prev -1); 
-        alert('Minimo de compra');
     }
 
     return (

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Item.css';
 
 function Item({prod}) {
     return (
         <div className='card w-100 mt-5'>
             <div className='card-header'>
-                {`${prod.name} - ${prod.price}`}
+                {`${prod.name} - ${prod.stock}`}
             </div>
             <div className='card-body'>
                 <img src={prod.img} alt={prod.alt} className='w-50' />

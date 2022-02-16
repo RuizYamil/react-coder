@@ -1,5 +1,4 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import Widget from './Widget';
 import { Link } from 'react-router-dom';

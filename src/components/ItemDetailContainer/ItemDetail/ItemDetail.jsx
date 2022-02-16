@@ -5,9 +5,7 @@ import ItemCount from '../../useState/ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail({product}) {
-    const {cartList, addCart} = useCartContext()
-
-    console.log(cartList);
+    const {addCart} = useCartContext()
 
     const [show, setShow] = useState(true)
 
